@@ -10,182 +10,230 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link rel="preload" as="font" type="font/woff2" href="/fonts/Inter.var.woff2" crossorigin>
     <!-- Font & Styles -->
-    <link href="https://fonts.bunny.net/css?family=inter:400,500,700|space-grotesk:600" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,700|space-grotesk:600|roboto-mono:400,700" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <style>
         .profit-glow {
-            text-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+            text-shadow: 0 0 20px rgba(34, 211, 238, 0.5), 0 0 40px rgba(34, 211, 238, 0.3);
+            transition: text-shadow 0.3s ease;
         }
         .risk-mask {
             mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            background: linear-gradient(45deg, #22d3ee, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-bg {
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.8), rgba(17, 24, 39, 0.9));
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .button-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        .button-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            transition: 0.5s;
+        }
+        .button-glow:hover::before {
+            left: 100%;
+        }
+        .particles-section {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
         }
     </style>
 </head>
 
 <body class="font-inter bg-gradient-to-b from-gray-900 via-blue-900 to-gray-900 text-gray-100">
-    
     <!-- Hero Section -->
     <header class="relative min-h-screen flex items-center risk-mask">
-        
+        <div id="particles-hero" class="particles-section"></div>
         <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
-                <div class="inline-block bg-gray-800/50 px-6 py-3 rounded-full mb-8 text-cyan-400">
+            <div class="max-w-6xl mx-auto text-center" data-aos="fade-up" data-aos-duration="1000">
+                <div class="inline-block bg-gray-800/50 px-6 py-3 rounded-full mb-8 text-cyan-400 animate-pulse-slow">
                     🚀 Hình thức đầu tư đứng trên vai người khổng lồ 🚀
                 </div>
                 <h1 class="text-4xl md:text-6xl font-space-grotesk font-bold mb-6 leading-tight">
-                     <span class="profit-glow bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">HOANG </span> <span class="profit-glow bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">TRADING</span><br>
+                    <span class="profit-glow bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">HOANG </span>
+                    <span class="profit-glow bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">TRADING</span><br>
                     Giao dịch cùng Pro Trader
                 </h1>
-                
-                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto font-roboto-mono">
                     Tự động sao chép giao dịch trên sàn Exness<br>
                     <span class="text-cyan-400 font-medium">Lợi nhuận trung bình 10%/tháng | Rủi ro mỗi lệnh 1 - 2%</span>
                 </p>
-
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
                     <button class="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-semibold transition-all 
-                               transform hover:scale-105 shadow-lg shadow-cyan-500/30 flex items-center gap-2">
+                               transform hover-scale button-glow shadow-lg shadow-cyan-500/30 flex items-center gap-2" data-aos="zoom-in" data-aos-delay="200">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         <a href="https://www.social-trading.club/strategy/110326028" target="_blank">
-                        Bắt đầu sao chép chỉ với 10$
+                            Bắt đầu sao chép chỉ với 10$
                         </a>
                     </button>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Performance Stats -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
+    <section class="py-20 relative">
+        <div id="particles-stats" class="particles-section"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="grid md:grid-cols-3 gap-8 text-center">
-
-                <div class="p-6 bg-gradient-to-br from-gray-800 to-blue-900/50 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all">
-                    <div class="text-4xl font-bold text-cyan-400 mb-2">TRÌNH ĐỘ</div>
-                    <div class="text-gray-200">Không cần chứng minh</div>
+                <div class="p-6 card-bg rounded-xl border border-cyan-500/20 hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2 font-space-grotesk">TRÌNH ĐỘ</div>
+                    <div class="text-gray-200 font-roboto-mono">Không cần chứng minh</div>
                     <div class="mt-4 text-sm text-cyan-400">Kết quả nói lên tất cả</div>
                 </div>
-
-                <div class="p-6 bg-gradient-to-br from-gray-800 to-blue-900/50 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all">
-                    <div class="text-4xl font-bold text-cyan-400 mb-2">UY TÍN</div>
-                    <div class="text-gray-200">Giao dịch trên sàn Exness</div>
+                <div class="p-6 card-bg rounded-xl border border-cyan-500/20 hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2 font-space-grotesk">UY TÍN</div>
+                    <div class="text-gray-200 font-roboto-mono">Giao dịch trên sàn Exness</div>
                     <div class="mt-4 text-sm text-cyan-400">Trường hợp xấu nhất là Exness die</div>
                 </div>
-
-                <div class="p-6 bg-gradient-to-br from-gray-800 to-blue-900/50 rounded-xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all">
-                    <div class="text-4xl font-bold text-cyan-400 mb-2">CHẤT LƯỢNG</div>
-                    <div class="text-gray-200">Quản lý vốn cực kỳ chặt</div>
+                <div class="p-6 card-bg rounded-xl border border-cyan-500/20 hover-scale" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold text-cyan-400 mb-2 font-space-grotesk">CHẤT LƯỢNG</div>
+                    <div class="text-gray-200 font-roboto-mono">Quản lý vốn cực kỳ chặt</div>
                     <div class="mt-4 text-sm text-cyan-400">Rủi ro tối thiểu - Lợi nhuận tối đa</div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16">3 BƯỚC COPYTRADE</h2>
-            
+    <section class="py-20 bg-gray-900 relative">
+        <div id="particles-how" class="particles-section"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title" data-aos="fade-down">3 BƯỚC COPYTRADE</h2>
             <div class="grid md:grid-cols-3 gap-8">
-
-                <div class="relative p-8 bg-gray-800 rounded-xl group hover:bg-gray-700/50 transition-all text-center">
+                <div class="relative p-8 card-bg rounded-xl group hover-scale text-center" data-aos="fade-right" data-aos-delay="100">
                     <div class="absolute inset-0 border border-cyan-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="text-cyan-400 text-5xl mb-4 font-space-grotesk">01</div>
-                    <h3 class="text-xl font-semibold mb-4">Đăng ký Social Exness</h3>
-                    <div style="display: flex; justify-content: center;"> 
+                    <h3 class="text-xl font-semibold mb-4 font-roboto-mono">Đăng ký Social Exness</h3>
+                    <div style="display: flex; justify-content: center;">
                         <button class="bg-cyan-500 hover:bg-cyan-600 px-6 py-1 rounded-full font-semibold transition-all 
-                                transform hover:scale-105 shadow-lg shadow-cyan-500/30 flex items-center gap-2">
+                                   transform hover-scale button-glow shadow-lg shadow-cyan-500/30 flex items-center gap-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                             <a href="https://social-trading.exness.com/a/di49ago7cv/?platform=mobile" target="_blank">
-                            Tại đây
+                                Tại đây
                             </a>
                         </button>
                     </div>
                 </div>
-
-                <div class="relative p-8 bg-gray-800 rounded-xl group hover:bg-gray-700/50 transition-all text-center">
+                <div class="relative p-8 card-bg rounded-xl group hover-scale text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="absolute inset-0 border border-cyan-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="text-cyan-400 text-5xl mb-4 font-space-grotesk">02</div>
-                    <h3 class="text-xl font-semibold mb-4">Chọn chiến lược sao chép</h3>
-                    <div style="display: flex; justify-content: center;"> 
+                    <h3 class="text-xl font-semibold mb-4 font-roboto-mono">Chọn chiến lược sao chép</h3>
+                    <div style="display: flex; justify-content: center;">
                         <button class="bg-cyan-500 hover:bg-cyan-600 px-6 py-1 rounded-full font-semibold transition-all 
-                        transform hover:scale-105 shadow-lg shadow-cyan-500/30 flex items-center gap-2">
+                                   transform hover-scale button-glow shadow-lg shadow-cyan-500/30 flex items-center gap-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                             <a href="https://www.social-trading.club/strategy/110326028" target="_blank">
-                            Tại đây
+                                Tại đây
                             </a>
                         </button>
                     </div>
                 </div>
-
-                <div class="relative p-8 bg-gray-800 rounded-xl group hover:bg-gray-700/50 transition-all text-center">
+                <div class="relative p-8 card-bg rounded-xl group hover-scale text-center" data-aos="fade-left" data-aos-delay="300">
                     <div class="absolute inset-0 border border-cyan-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="text-cyan-400 text-5xl mb-4 font-space-grotesk">03</div>
-                    <h3 class="text-xl font-semibold mb-4">Bắt đầu sao chép</h3>
-                    <p class="text-gray-200">Bạn có thể đầu tư tối thiểu 10$</p>
+                    <h3 class="text-xl font-semibold mb-4 font-roboto-mono">Bắt đầu sao chép</h3>
+                    <p class="text-gray-200 font-roboto-mono">Bạn có thể đầu tư tối thiểu 10$</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Trader Performance -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
+    <section class="py-20 relative">
+        <div id="particles-trader" class="particles-section"></div>
+        <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gray-800 rounded-2xl p-8 shadow-2xl">
+                <div class="card-bg rounded-2xl p-8 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="flex-1">
-                            <h3 class="text-2xl font-bold mb-4">NGUYÊN TẮC GIAO DỊCH</h3>
+                            <h3 class="text-2xl font-bold mb-4 section-title">NGUYÊN TẮC GIAO DỊCH</h3>
                             <div class="space-y-6">
-
-                                <div class="flex items-center gap-4 p-4 bg-gray-700 rounded-lg">
-                                    <div class="text-cyan-400 font-bold">#1</div>
+                                <div class="flex items-center gap-4 p-4 bg-gray-700 rounded-lg hover-scale" data-aos="fade-right" data-aos-delay="100">
+                                    <div class="text-cyan-400 font-bold font-roboto-mono">#1</div>
                                     <div class="flex-1">
-                                        <div class="font-semibold">Quản trị vốn</div>
+                                        <div class="font-semibold font-roboto-mono">Quản trị vốn</div>
                                     </div>
-                                    <div class="text-green-100 font-bold"> 40%</div>
+                                    <div class="text-green-100 font-bold font-roboto-mono">40%</div>
                                 </div>
-
-                                <div class="flex items-center gap-4 p-4 bg-gray-700 rounded-lg">
-                                    <div class="text-cyan-400 font-bold">#2</div>
+                                <div class="flex items-center gap-4 p-4 bg-gray-700 rounded-lg hover-scale" data-aos="fade-right" data-aos-delay="200">
+                                    <div class="text-cyan-400 font-bold font-roboto-mono">#2</div>
                                     <div class="flex-1">
-                                        <div class="font-semibold">Quản trị cảm xúc</div>
+                                        <div class="font-semibold font-roboto-mono">Quản trị cảm xúc</div>
                                     </div>
-                                    <div class="text-green-100 font-bold"> 40%</div>
+                                    <div class="text-green-100 font-bold font-roboto-mono">40%</div>
                                 </div>
-
-                                <div class="flex items-center gap-4 p-4 bg-gray-700 rounded-lg md:w-2/3">
-                                    <div class="text-cyan-400 font-bold">#3</div>
+                                <div class="flex items-center gap-4 p-4 bg-gray-700 rounded-lg md:w-2/3 hover-scale" data-aos="fade-right" data-aos-delay="300">
+                                    <div class="text-cyan-400 font-bold font-roboto-mono">#3</div>
                                     <div class="flex-1">
-                                        <div class="font-semibold">Phương pháp giao dịch</div>
+                                        <div class="font-semibold font-roboto-mono">Phương pháp giao dịch</div>
                                     </div>
-                                    <div class="text-green-100 font-bold"> 20%</div>
+                                    <div class="text-green-100 font-bold font-roboto-mono">20%</div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="md:w-1/3">
-                            <div class="bg-gray-900 p-6 rounded-xl">
-                                <div class="text-cyan-400 mb-4">Chỉ số chiến lược</div>
+                            <div class="bg-gray-900 p-6 rounded-xl" data-aos="fade-left" data-aos-delay="400">
+                                <div class="text-cyan-400 mb-4 font-space-grotesk">Chỉ số chiến lược</div>
                                 <div class="space-y-4">
                                     <div>
-                                        <div class="text-sm text-gray-400">Lợi nhuận ròng</div>
-                                        <div class="text-2xl font-bold text-green-500">40%</div>
+                                        <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận ròng</div>
+                                        <div class="text-2xl font-bold text-green-500 font-roboto-mono">40%</div>
                                     </div>
                                     <div>
-                                        <div class="text-sm text-gray-400">Lợi nhuận TB tháng</div>
-                                        <div class="text-2xl font-bold text-green-300">10%</div>
+                                        <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận TB tháng</div>
+                                        <div class="text-2xl font-bold text-green-300 font-roboto-mono">10%</div>
                                     </div>
                                     <div>
-                                        <div class="text-sm text-gray-400">Mức sụt giảm tối đa</div>
-                                        <div class="text-2xl font-bold text-red-400">3,7%</div>
+                                        <div class="text-sm text-gray-400 font-roboto-mono">Mức sụt giảm tối đa</div>
+                                        <div class="text-2xl font-bold text-red-400 font-roboto-mono">3,7%</div>
                                     </div>
                                 </div>
                             </div>
@@ -197,74 +245,70 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16">Câu hỏi của người mới</h2>
+    <section class="py-20 bg-gray-900 relative">
+        <div id="particles-faq" class="particles-section"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title" data-aos="fade-down">Câu hỏi của người mới</h2>
             <div class="max-w-3xl mx-auto space-y-4">
-
-                <div class="border border-gray-800 rounded-xl">
+                <div class="border border-gray-800 rounded-xl card-bg" data-aos="fade-up" data-aos-delay="100">
                     <details class="group">
                         <summary class="p-6 flex justify-between items-center cursor-pointer">
-                            <span class="font-medium">Có rút tiền ra được không?</span>
+                            <span class="font-medium font-roboto-mono">Có rút tiền ra được không?</span>
                             <span class="transition-transform group-open:rotate-180">▼</span>
                         </summary>
-                        <div class="p-6 pt-0 text-gray-300">
+                        <div class="p-6 pt-0 text-gray-300 font-roboto-mono">
                             Phụ thuộc hoàn toàn vào Exness. Exness là sàn giao dịch CFD uy tín và chất lượng, được khá nhiều trader tin dùng. Xong, không nên đặt hoàn toàn niềm tin vào bất cứ thứ gì.
                         </div>
                     </details>
                 </div>
-                
-                <div class="border border-gray-800 rounded-xl">
+                <div class="border border-gray-800 rounded-xl card-bg" data-aos="fade-up" data-aos-delay="200">
                     <details class="group">
                         <summary class="p-6 flex justify-between items-center cursor-pointer">
-                            <span class="font-medium">Đầu tư copytrade có an toàn không?</span>
+                            <span class="font-medium font-roboto-mono">Đầu tư copytrade có an toàn không?</span>
                             <span class="transition-transform group-open:rotate-180">▼</span>
                         </summary>
-                        <div class="p-6 pt-0 text-gray-300">
+                        <div class="p-6 pt-0 text-gray-300 font-roboto-mono">
                             Không gì là an toàn tuyệt đối, trading luôn tiềm ẩn rủi ro. Quan trọng là có quản trị được hay không thôi. Nên đầu tư với số tiền chấp nhận mất.
                         </div>
                     </details>
                 </div>
-
-                <div class="border border-gray-800 rounded-xl">
+                <div class="border border-gray-800 rounded-xl card-bg" data-aos="fade-up" data-aos-delay="300">
                     <details class="group">
                         <summary class="p-6 flex justify-between items-center cursor-pointer">
-                            <span class="font-medium">Đầu tư copytrade có an toàn không?</span>
+                            <span class="font-medium font-roboto-mono">Đầu tư copytrade có an toàn không?</span>
                             <span class="transition-transform group-open:rotate-180">▼</span>
                         </summary>
-                        <div class="p-6 pt-0 text-gray-300">
+                        <div class="p-6 pt-0 text-gray-300 font-roboto-mono">
                             Không gì là an toàn tuyệt đối, trading luôn tiềm ẩn rủi ro. Quan trọng là có quản trị được hay không thôi. Nên đầu tư với số tiền chấp nhận mất ở thị trường này.
                         </div>
                     </details>
                 </div>
-
-                <div class="border border-gray-800 rounded-xl">
+                <div class="border border-gray-800 rounded-xl card-bg" data-aos="fade-up" data-aos-delay="400">
                     <details class="group">
                         <summary class="p-6 flex justify-between items-center cursor-pointer">
-                            <span class="font-medium">Lợi nhuận hàng tháng có đều không?</span>
+                            <span class="font-medium font-roboto-mono">Lợi nhuận hàng tháng có đều không?</span>
                             <span class="transition-transform group-open:rotate-180">▼</span>
                         </summary>
-                        <div class="p-6 pt-0 text-gray-300">
+                        <div class="p-6 pt-0 text-gray-300 font-roboto-mono">
                             Bạn rất muốn nghe câu trả lời là "có" nhưng không có sự ổn định hàng tháng ở đây đâu. Hãy cân bằng giữa lợi nhuận và rủi ro, lợi nhuận càng lớn thì rủi ro càng cao.
                         </div>
                     </details>
                 </div>
-
-
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="py-20 bg-gradient-to-r from-cyan-500 to-blue-600">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8">Bắt đầu kiếm lợi nhuận cùng Pro Trader!</h2>
-            <p class="text-lg text-cyan-100 mb-8">Hãy tìm hiểu thật kỹ về trading trước khi đưa ra quyết định</p>
+    <section class="py-20 bg-gradient-to-r from-cyan-500 to-blue-600 relative">
+        <div id="particles-cta" class="particles-section"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-8 section-title" data-aos="fade-up">Bắt đầu kiếm lợi nhuận cùng Pro Trader!</h2>
+            <p class="text-lg text-cyan-100 mb-8 font-roboto-mono" data-aos="fade-up" data-aos-delay="100">Hãy tìm hiểu thật kỹ về trading trước khi đưa ra quyết định</p>
             <div class="flex justify-center gap-4">
                 <button class="bg-white text-cyan-600 px-12 py-5 rounded-full font-bold text-lg
-                           hover:bg-gray-100 transition-all shadow-xl flex items-center gap-2">
+                           hover:bg-gray-100 transition-all shadow-xl button-glow flex items-center gap-2" data-aos="zoom-in" data-aos-delay="200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linecap="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                     </svg>
                     <a href="https://www.social-trading.club/strategy/110326028" target="_blank">Xem chiến lược giao dịch</a>
                 </button>
@@ -273,54 +317,102 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-12">
-        <div class="container mx-auto px-4">
-
+    <footer class="bg-gray-900 py-12 relative">
+        <div id="particles-footer" class="particles-section"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <p class="text-gray-400 font-roboto-mono" data-aos="fade-up">© 2025 HOANG TRADING. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Particle configuration
+        const particleConfig = {
+            particles: {
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: '#22d3ee' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'grab' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        };
+
+        // Initialize Particles.js for each section
+        particlesJS('particles-hero', particleConfig);
+        particlesJS('particles-stats', particleConfig);
+        particlesJS('particles-how', particleConfig);
+        particlesJS('particles-trader', particleConfig);
+        particlesJS('particles-faq', particleConfig);
+        particlesJS('particles-cta', particleConfig);
+        particlesJS('particles-footer', particleConfig);
+
         // Lazy Load + Animations
         document.addEventListener("DOMContentLoaded", function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fadeInUp')
+                        entry.target.classList.add('animate-fadeInUp');
                     }
-                })
-            }, { threshold: 0.1 })
+                });
+            }, { threshold: 0.1 });
 
-            document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el))
+            document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
             // ROI Calculator Logic
             const roiCalculator = {
                 init() {
-                    this.cacheElements()
-                    this.bindEvents()
-                    this.updateROI()
+                    this.cacheElements();
+                    this.bindEvents();
+                    this.updateROI();
                 },
                 cacheElements() {
-                    this.amountInput = document.querySelector('#investmentAmount')
-                    this.amountValue = document.querySelector('#amountValue')
-                    this.monthSelect = document.querySelector('#investmentMonths')
-                    this.roiOutput = document.querySelector('#roiResult')
+                    this.amountInput = document.querySelector('#investmentAmount');
+                    this.amountValue = document.querySelector('#amountValue');
+                    this.monthSelect = document.querySelector('#investmentMonths');
+                    this.roiOutput = document.querySelector('#roiResult');
                 },
                 bindEvents() {
-                    this.amountInput.addEventListener('input', () => this.updateROI())
-                    this.monthSelect.addEventListener('change', () => this.updateROI())
+                    if (this.amountInput) this.amountInput.addEventListener('input', () => this.updateROI());
+                    if (this.monthSelect) this.monthSelect.addEventListener('change', () => this.updateROI());
                 },
                 updateROI() {
-                    const amount = parseFloat(this.amountInput.value)
-                    const months = parseInt(this.monthSelect.value)
-                    const roi = amount * Math.pow(1.12, months) - amount
-                    this.amountValue.textContent = `$${amount.toLocaleString()}`
-                    this.roiOutput.textContent = `$${roi.toFixed(0).toLocaleString()}`
+                    const amount = parseFloat(this.amountInput?.value || 0);
+                    const months = parseInt(this.monthSelect?.value || 1);
+                    const roi = amount * Math.pow(1.12, months) - amount;
+                    if (this.amountValue) this.amountValue.textContent = `$${amount.toLocaleString()}`;
+                    if (this.roiOutput) this.roiOutput.textContent = `$${roi.toFixed(0).toLocaleString()}`;
                 }
-            }
+            };
 
-            roiCalculator.init()
-        })
+            roiCalculator.init();
+        });
     </script>
 </body>
 </html>
