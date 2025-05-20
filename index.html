@@ -78,6 +78,13 @@
             left: 0;
             z-index: 0;
         }
+        .cta-pulse {
+            animation: ctaPulse 2s infinite;
+        }
+        @keyframes ctaPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(34, 211, 238, 0); }
+        }
     </style>
 </head>
 
@@ -100,7 +107,7 @@
                     <span class="text-cyan-400 font-medium">Lợi nhuận trung bình 10%/tháng | Rủi ro mỗi lệnh 1 - 2%</span>
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-                    <button class="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 rounded-full font-semibold transition-all 
+                    <button class="bg-cyan-500 hover:bg-cyan-600 px-8 py-4 cta-pulse rounded-full font-semibold transition-all 
                                transform hover-scale button-glow shadow-lg shadow-cyan-500/30 flex items-center gap-2" data-aos="zoom-in" data-aos-delay="200">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -305,7 +312,7 @@
             <h2 class="text-3xl font-bold mb-8 section-title" data-aos="fade-up">Bắt đầu kiếm lợi nhuận cùng Pro Trader!</h2>
             <p class="text-lg text-cyan-100 mb-8 font-roboto-mono" data-aos="fade-up" data-aos-delay="100">Hãy tìm hiểu thật kỹ về trading trước khi đưa ra quyết định</p>
             <div class="flex justify-center gap-4">
-                <button class="bg-white text-cyan-600 px-12 py-5 rounded-full font-bold text-lg
+                <button class="bg-white text-cyan-600 px-12 py-5 rounded-full cta-pulse font-bold text-lg
                            hover:bg-gray-100 transition-all shadow-xl button-glow flex items-center gap-2" data-aos="zoom-in" data-aos-delay="200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
