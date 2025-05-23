@@ -181,31 +181,33 @@
 
 
     document.addEventListener('DOMContentLoaded', function () {
-        // Kiểm tra nếu Tabletop đã được định nghĩa
-        if (typeof Tabletop === 'undefined') {
-            console.error('Tabletop.js không được tải. Kiểm tra kết nối CDN.');
-            // Đặt giá trị mặc định nếu lỗi
-            document.getElementById('net-profit').textContent = '45%';
-            document.getElementById('avg-monthly-profit').textContent = '10%';
-            document.getElementById('max-drawdown').textContent = '3,92%';
-            return;
-        }
-    
+    if (typeof Tabletop === 'undefined') {
+        console.error('Tabletop.js không được tải. Kiểm tra kết nối CDN.');
+        document.getElementById('net-profit').textContent = '45%';
+        document.getElementById('avg-monthly-profit').textContent = '10%';
+        document.getElementById('max-drawdown').textContent = '3,92%';
+        return;
+    }
+
+    function loadData() {
         Tabletop.init({
             key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQmRWQ02X7FosjI8BgnwCUfJZEASJOBlGVZoAduwMybEE39cGSKJudL7IXAbhKaws84WyrVYueno3Xg/pubhtml',
             callback: function (data, tabletop) {
-                const stats = data[0]; // Lấy hàng đầu tiên
+                const stats = data[0];
                 document.getElementById('net-profit').textContent = stats['Net Profit'] || 'N/A';
                 document.getElementById('avg-monthly-profit').textContent = stats['Avg Monthly Profit'] || 'N/A';
                 document.getElementById('max-drawdown').textContent = stats['Max Drawdown'] || 'N/A';
+                console.log('Dữ liệu đã cập nhật:', stats);
             },
             simpleSheet: true
-        }).then(() => {
-            console.log('Dữ liệu từ Google Sheets đã được tải.');
         }).catch(error => {
             console.error('Lỗi khi tải dữ liệu:', error);
             document.getElementById('net-profit').textContent = '45%';
             document.getElementById('avg-monthly-profit').textContent = '10%';
             document.getElementById('max-drawdown').textContent = '3,92%';
         });
-    });
+    }
+
+    loadData();
+    setInterval(loadData, 60000); // Tải lại mỗi 1 phút
+});
