@@ -9,7 +9,7 @@
     <!-- Font & Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Space+Grotesk:wght@600&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Liên kết CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -114,7 +114,7 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="card-bg rounded-2xl p-8 shadow-2xl hover-scale" data-aos="fade-up" data-aos-duration="800">
                         <div class="chart-container">
-                            <canvas id="profitChart"></canvas>
+                            <canvas id="performance-chart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -122,8 +122,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Profit Chart Section -->
 
 
     <!-- Quy_trinh -->
@@ -212,18 +210,18 @@
                                 <div class="text-cyan-400 mb-4 font-space-grotesk">Chỉ số chiến lược</div>
                                 <div class="space-y-4">
                                     <div>
-                                        <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận ròng</div>
-                                        <div id="net-profit" class="text-2xl font-bold text-green-500 font-roboto-mono">45%</div>
+                                      <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận ròng</div>
+                                      <div id="net-profit" class="text-2xl font-bold text-green-500 font-roboto-mono">45%</div>
                                     </div>
                                     <div>
-                                        <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận TB tháng</div>
-                                        <div id="avg-monthly-profit" class="text-2xl font-bold text-green-300 font-roboto-mono">10%</div>
+                                      <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận TB tháng</div>
+                                      <div id="avg-monthly-profit" class="text-2xl font-bold text-green-300 font-roboto-mono">10%</div>
                                     </div>
                                     <div>
-                                        <div class="text-sm text-gray-400 font-roboto-mono">Mức sụt giảm tối đa</div>
-                                        <div id="max-drawdown" class="text-2xl font-bold text-red-400 font-roboto-mono">3,92%</div>
+                                      <div class="text-sm text-gray-400 font-roboto-mono">Mức sụt giảm tối đa</div>
+                                      <div id="max-drawdown" class="text-2xl font-bold text-red-400 font-roboto-mono">3,92%</div>
                                     </div>
-                                </div>
+                                  </div>
                             </div>
                         </div>
                     </div>
@@ -358,7 +356,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.6.1/tabletop.min.js"></script>
+
+    <!-- Thêm Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
     <script src="js/script.js"></script>
 </body>
 </html>
