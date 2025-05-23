@@ -1,1 +1,211 @@
-function _0x5d1a(_0x42dcf3,_0x42504d){const _0x98eacd=_0x98ea();return _0x5d1a=function(_0x5d1a12,_0x216bda){_0x5d1a12=_0x5d1a12-0x1e0;let _0x27ecba=_0x98eacd[_0x5d1a12];return _0x27ecba;},_0x5d1a(_0x42dcf3,_0x42504d);}function _0x98ea(){const _0x189f07=['animate-fadeInUp','Lợi\x20nhuận:\x20','particles-trader','particles-hero','8qRHZdM','parsed','href','70774acLone','cacheElements','T11','forEach','toFixed','add','roiOutput','#investmentMonths','[data-animate]','123777sNXmet','circle','scrollTo','particles-stats','remove','845180OTXigB','getAttribute','3497788MepfYl','DOMContentLoaded','3257550YELnSW','value','canvas','Lợi\x20nhuận\x20(%)','rgba(34,\x20211,\x20238,\x200.7)','toggle','textContent','out','offsetTop','#investmentAmount','rgba(34,\x20211,\x20238,\x200.9)','bar','grab','click','#22d3ee','a[href^=\x22#\x22]','mobile-menu','toLocaleString','querySelector','rgba(255,\x20255,\x20255,\x200.1)','target','26094kbsmDY','particles-faq','none','Quicksand','bindEvents','querySelectorAll','#amountValue','particles-how','2350887aaMxxb','amountValue','hidden','getContext','#d1d5db','T12','particles-testimonials','change','active','contains','monthSelect','addEventListener','observe','smooth','pow','classList','905abINxC','particles-profit-chart','updateROI','amountInput','11kPsByX','getElementById','init','rgba(34,\x20211,\x20238,\x201)','substring','menu-toggle','profitChart','particles-cta'];_0x98ea=function(){return _0x189f07;};return _0x98ea();}const _0x8432f8=_0x5d1a;(function(_0x3ebebc,_0x555c27){const _0x1755e6=_0x5d1a,_0x49dd87=_0x3ebebc();while(!![]){try{const _0x3d8609=parseInt(_0x1755e6(0x1e4))/0x1*(-parseInt(_0x1755e6(0x1f3))/0x2)+parseInt(_0x1755e6(0x222))/0x3+-parseInt(_0x1755e6(0x203))/0x4+parseInt(_0x1755e6(0x1e0))/0x5*(parseInt(_0x1755e6(0x21a))/0x6)+-parseInt(_0x1755e6(0x201))/0x7+parseInt(_0x1755e6(0x1f0))/0x8*(-parseInt(_0x1755e6(0x1fc))/0x9)+parseInt(_0x1755e6(0x205))/0xa;if(_0x3d8609===_0x555c27)break;else _0x49dd87['push'](_0x49dd87['shift']());}catch(_0x55c4be){_0x49dd87['push'](_0x49dd87['shift']());}}}(_0x98ea,0x79ab4),AOS[_0x8432f8(0x1e6)]({'duration':0x320,'once':!![],'offset':0x64}));const particleConfig={'particles':{'number':{'value':0x32,'density':{'enable':!![],'value_area':0x320}},'color':{'value':_0x8432f8(0x213)},'shape':{'type':_0x8432f8(0x1fd)},'opacity':{'value':0.3,'random':!![]},'size':{'value':0x3,'random':!![]},'line_linked':{'enable':![]},'move':{'enable':!![],'speed':0x2,'direction':_0x8432f8(0x21c),'random':!![],'straight':![],'out_mode':_0x8432f8(0x20c),'bounce':![]}},'interactivity':{'detect_on':_0x8432f8(0x207),'events':{'onhover':{'enable':!![],'mode':_0x8432f8(0x211)},'onclick':{'enable':!![],'mode':'push'},'resize':!![]}},'retina_detect':!![]};particlesJS(_0x8432f8(0x1ef),particleConfig),particlesJS(_0x8432f8(0x1ff),particleConfig),particlesJS(_0x8432f8(0x1e1),particleConfig),particlesJS(_0x8432f8(0x221),particleConfig),particlesJS(_0x8432f8(0x1ee),particleConfig),particlesJS(_0x8432f8(0x21b),particleConfig),particlesJS(_0x8432f8(0x228),particleConfig),particlesJS(_0x8432f8(0x1eb),particleConfig),particlesJS('particles-footer',particleConfig),document[_0x8432f8(0x21f)](_0x8432f8(0x214))['forEach'](_0x2db052=>{const _0x191bf4=_0x8432f8;_0x2db052[_0x191bf4(0x22d)](_0x191bf4(0x212),function(_0xb7ce46){const _0x1c0753=_0x191bf4;_0xb7ce46['preventDefault']();const _0x3f2246=this[_0x1c0753(0x202)](_0x1c0753(0x1f2))[_0x1c0753(0x1e8)](0x1),_0x48aded=document[_0x1c0753(0x1e5)](_0x3f2246);_0x48aded&&window[_0x1c0753(0x1fe)]({'top':_0x48aded[_0x1c0753(0x20d)]-0x50,'behavior':_0x1c0753(0x22f)});const _0x231f24=document['getElementById'](_0x1c0753(0x215));_0x231f24&&!_0x231f24[_0x1c0753(0x231)][_0x1c0753(0x22b)](_0x1c0753(0x224))&&(_0x231f24[_0x1c0753(0x231)][_0x1c0753(0x1f8)](_0x1c0753(0x224)),document[_0x1c0753(0x1e5)](_0x1c0753(0x1e9))[_0x1c0753(0x231)][_0x1c0753(0x200)](_0x1c0753(0x22a)));});}),document['getElementById']('menu-toggle')['addEventListener'](_0x8432f8(0x212),function(){const _0x458f9c=_0x8432f8,_0x190520=document[_0x458f9c(0x1e5)](_0x458f9c(0x215));_0x190520[_0x458f9c(0x231)][_0x458f9c(0x20a)](_0x458f9c(0x224)),this[_0x458f9c(0x231)][_0x458f9c(0x20a)](_0x458f9c(0x22a));}),document['addEventListener'](_0x8432f8(0x204),function(){const _0x53a9ab=_0x8432f8,_0x10ca90=document[_0x53a9ab(0x1e5)](_0x53a9ab(0x1ea))[_0x53a9ab(0x225)]('2d');new Chart(_0x10ca90,{'type':_0x53a9ab(0x210),'data':{'labels':['T1','T2','T3','T4','T5','T6','T7','T8','T9','T10',_0x53a9ab(0x1f5),_0x53a9ab(0x227)],'datasets':[{'label':_0x53a9ab(0x208),'data':[0x0,17.34,5.12,4.55,11.55,0x0,0x0,0x0,0x0,0x0,0x0,0x0],'backgroundColor':_0x53a9ab(0x209),'borderColor':_0x53a9ab(0x1e7),'borderWidth':0x1,'hoverBackgroundColor':_0x53a9ab(0x20f),'hoverBorderColor':_0x53a9ab(0x1e7)}]},'options':{'responsive':!![],'maintainAspectRatio':![],'plugins':{'legend':{'display':![]},'tooltip':{'backgroundColor':'rgba(17,\x2024,\x2039,\x200.9)','titleFont':{'family':_0x53a9ab(0x21d),'size':0xe},'bodyFont':{'family':'Quicksand','size':0xc},'callbacks':{'label':function(_0x121ba7){const _0x3032de=_0x53a9ab;return _0x3032de(0x1ed)+_0x121ba7[_0x3032de(0x1f1)]['y']+'%';}}}},'scales':{'x':{'ticks':{'color':'#d1d5db','font':{'family':_0x53a9ab(0x21d),'size':0xc}},'grid':{'display':![]}},'y':{'beginAtZero':!![],'max':0x14,'ticks':{'color':_0x53a9ab(0x226),'font':{'family':'Quicksand','size':0xc},'callback':function(_0x3ecde4){return _0x3ecde4+'%';}},'grid':{'color':_0x53a9ab(0x218)}}}}});}),document['addEventListener'](_0x8432f8(0x204),function(){const _0x37e22f=_0x8432f8,_0x2813fa=new IntersectionObserver(_0x1bdff0=>{const _0x191220=_0x5d1a;_0x1bdff0[_0x191220(0x1f6)](_0x31cd16=>{const _0x11f699=_0x191220;_0x31cd16['isIntersecting']&&_0x31cd16[_0x11f699(0x219)][_0x11f699(0x231)][_0x11f699(0x1f8)](_0x11f699(0x1ec));});},{'threshold':0.1});document[_0x37e22f(0x21f)](_0x37e22f(0x1fb))[_0x37e22f(0x1f6)](_0x559364=>_0x2813fa[_0x37e22f(0x22e)](_0x559364));const _0x6e0b67={'init'(){const _0x5cb0d9=_0x37e22f;this[_0x5cb0d9(0x1f4)](),this[_0x5cb0d9(0x21e)](),this[_0x5cb0d9(0x1e2)]();},'cacheElements'(){const _0x8c67bf=_0x37e22f;this[_0x8c67bf(0x1e3)]=document[_0x8c67bf(0x217)](_0x8c67bf(0x20e)),this[_0x8c67bf(0x223)]=document[_0x8c67bf(0x217)](_0x8c67bf(0x220)),this[_0x8c67bf(0x22c)]=document[_0x8c67bf(0x217)](_0x8c67bf(0x1fa)),this[_0x8c67bf(0x1f9)]=document[_0x8c67bf(0x217)]('#roiResult');},'bindEvents'(){const _0xdb2877=_0x37e22f;if(this[_0xdb2877(0x1e3)])this['amountInput'][_0xdb2877(0x22d)]('input',()=>this[_0xdb2877(0x1e2)]());if(this[_0xdb2877(0x22c)])this[_0xdb2877(0x22c)][_0xdb2877(0x22d)](_0xdb2877(0x229),()=>this['updateROI']());},'updateROI'(){const _0x56fe87=_0x37e22f,_0x3b7c00=parseFloat(this['amountInput']?.[_0x56fe87(0x206)]||0x0),_0x17b117=parseInt(this[_0x56fe87(0x22c)]?.['value']||0x1),_0x4bf4d5=_0x3b7c00*Math[_0x56fe87(0x230)](1.12,_0x17b117)-_0x3b7c00;if(this[_0x56fe87(0x223)])this['amountValue'][_0x56fe87(0x20b)]='$'+_0x3b7c00[_0x56fe87(0x216)]();if(this[_0x56fe87(0x1f9)])this[_0x56fe87(0x1f9)][_0x56fe87(0x20b)]='$'+_0x4bf4d5[_0x56fe87(0x1f7)](0x0)['toLocaleString']();}};_0x6e0b67[_0x37e22f(0x1e6)]();});
+       // Initialize AOS
+       AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+
+    // Particle configuration
+    const particleConfig = {
+        particles: {
+            number: { value: 50, density: { enable: true, value_area: 800 } },
+            color: { value: '#22d3ee' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.3, random: true },
+            size: { value: 3, random: true },
+            line_linked: { enable: false },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: true,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
+            }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: { enable: true, mode: 'grab' },
+                onclick: { enable: true, mode: 'push' },
+                resize: true
+            }
+        },
+        retina_detect: true
+    };
+
+    // Initialize Particles.js for each section
+    particlesJS('particles-hero', particleConfig);
+    particlesJS('particles-stats', particleConfig);
+    particlesJS('particles-profit-chart', particleConfig);
+    particlesJS('particles-how', particleConfig);
+    particlesJS('particles-trader', particleConfig);
+    particlesJS('particles-faq', particleConfig);
+    particlesJS('particles-testimonials', particleConfig);
+    particlesJS('particles-cta', particleConfig);
+    particlesJS('particles-footer', particleConfig);
+
+    // Smooth Scroll for Menu Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+            // Đóng menu mobile nếu đang mở
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                document.getElementById('menu-toggle').classList.remove('active');
+            }
+        });
+    });
+
+    // Toggle Mobile Menu
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+        this.classList.toggle('active');
+    });
+
+    // Initialize Profit Chart
+    document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('profitChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12'],
+                datasets: [{
+                    label: 'Lợi nhuận (%)',
+                    data: [0, 17.34, 5.12, 4.55, 11.55, 0, 0, 0, 0, 0, 0, 0],
+                    backgroundColor: 'rgba(34, 211, 238, 0.7)',
+                    borderColor: 'rgba(34, 211, 238, 1)',
+                    borderWidth: 1,
+                    hoverBackgroundColor: 'rgba(34, 211, 238, 0.9)',
+                    hoverBorderColor: 'rgba(34, 211, 238, 1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(17, 24, 39, 0.9)',
+                        titleFont: { family: 'Quicksand', size: 14 },
+                        bodyFont: { family: 'Quicksand', size: 12 },
+                        callbacks: {
+                            label: function(context) {
+                                return `Lợi nhuận: ${context.parsed.y}%`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: '#d1d5db',
+                            font: { family: 'Quicksand', size: 12 }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 20,
+                        ticks: {
+                            color: '#d1d5db',
+                            font: { family: 'Quicksand', size: 12 },
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    }
+                }
+            }
+        });
+    });
+
+    // Lazy Load + Animations
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+        // ROI Calculator Logic
+        const roiCalculator = {
+            init() {
+                this.cacheElements();
+                this.bindEvents();
+                this.updateROI();
+            },
+            cacheElements() {
+                this.amountInput = document.querySelector('#investmentAmount');
+                this.amountValue = document.querySelector('#amountValue');
+                this.monthSelect = document.querySelector('#investmentMonths');
+                this.roiOutput = document.querySelector('#roiResult');
+            },
+            bindEvents() {
+                if (this.amountInput) this.amountInput.addEventListener('input', () => this.updateROI());
+                if (this.monthSelect) this.monthSelect.addEventListener('change', () => this.updateROI());
+            },
+            updateROI() {
+                const amount = parseFloat(this.amountInput?.value || 0);
+                const months = parseInt(this.monthSelect?.value || 1);
+                const roi = amount * Math.pow(1.12, months) - amount;
+                if (this.amountValue) this.amountValue.textContent = `$${amount.toLocaleString()}`;
+                if (this.roiOutput) this.roiOutput.textContent = `$${roi.toFixed(0).toLocaleString()}`;
+            }
+        };
+
+        roiCalculator.init();
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Kiểm tra nếu Tabletop đã được định nghĩa
+        if (typeof Tabletop === 'undefined') {
+            console.error('Tabletop.js không được tải. Kiểm tra kết nối CDN.');
+            // Đặt giá trị mặc định nếu lỗi
+            document.getElementById('net-profit').textContent = '45%';
+            document.getElementById('avg-monthly-profit').textContent = '10%';
+            document.getElementById('max-drawdown').textContent = '3,92%';
+            return;
+        }
+    
+        Tabletop.init({
+            key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQmRWQ02X7FosjI8BgnwCUfJZEASJOBlGVZoAduwMybEE39cGSKJudL7IXAbhKaws84WyrVYueno3Xg/pubhtml',
+            callback: function (data, tabletop) {
+                const stats = data[0]; // Lấy hàng đầu tiên
+                document.getElementById('net-profit').textContent = stats['Net Profit'] || 'N/A';
+                document.getElementById('avg-monthly-profit').textContent = stats['Avg Monthly Profit'] || 'N/A';
+                document.getElementById('max-drawdown').textContent = stats['Max Drawdown'] || 'N/A';
+            },
+            simpleSheet: true
+        }).then(() => {
+            console.log('Dữ liệu từ Google Sheets đã được tải.');
+        }).catch(error => {
+            console.error('Lỗi khi tải dữ liệu:', error);
+            document.getElementById('net-profit').textContent = '45%';
+            document.getElementById('avg-monthly-profit').textContent = '10%';
+            document.getElementById('max-drawdown').textContent = '3,92%';
+        });
+    });
