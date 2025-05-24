@@ -133,54 +133,6 @@
     firebase.initializeApp(firebaseConfig);
     const database = firebase.database();
 
-    // Xử lý đăng nhập
-    function login() {
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(userCredential => {
-          document.getElementById('login-form').classList.add('hidden');
-          document.getElementById('logout-section').classList.remove('hidden');
-          document.getElementById('update-section').classList.remove('hidden');
-          document.getElementById('performance-update-section').classList.remove('hidden');
-          alert('Đăng nhập thành công!');
-        })
-        .catch(error => {
-          console.error('Lỗi đăng nhập:', error);
-          alert('Đăng nhập thất bại: ' + error.message);
-        });
-    }
-
-    // Xử lý đăng xuất
-    function logout() {
-      firebase.auth().signOut()
-        .then(() => {
-          document.getElementById('login-form').classList.remove('hidden');
-          document.getElementById('logout-section').classList.add('hidden');
-          document.getElementById('update-section').classList.add('hidden');
-          document.getElementById('performance-update-section').classList.add('hidden');
-          alert('Đăng xuất thành công!');
-        })
-        .catch(error => {
-          console.error('Lỗi đăng xuất:', error);
-          alert('Đăng xuất thất bại: ' + error.message);
-        });
-    }
-
-    // Kiểm tra trạng thái đăng nhập
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        document.getElementById('login-form').classList.add('hidden');
-        document.getElementById('logout-section').classList.remove('hidden');
-        document.getElementById('update-section').classList.remove('hidden');
-        document.getElementById('performance-update-section').classList.remove('hidden');
-      } else {
-        document.getElementById('login-form').classList.remove('hidden');
-        document.getElementById('logout-section').classList.add('hidden');
-        document.getElementById('update-section').classList.add('hidden');
-        document.getElementById('performance-update-section').classList.add('hidden');
-      }
-    });
 
     // Tải dữ liệu từ Firebase khi mở trang
     document.addEventListener('DOMContentLoaded', function () {
@@ -212,49 +164,9 @@
       });
     });
 
-    // Cập nhật số liệu chính lên Firebase
-    function updateData() {
-      if (confirm('Bạn có chắc chắn muốn cập nhật số liệu không?')) {
-        const newData = {
-          netProfit: document.getElementById('input-net-profit').value || document.getElementById('net-profit').textContent,
-          avgMonthlyProfit: document.getElementById('input-avg-monthly-profit').value || document.getElementById('avg-monthly-profit').textContent,
-          maxDrawdown: document.getElementById('input-max-drawdown').value || document.getElementById('max-drawdown').textContent
-        };
+    
 
-        database.ref('stats').set(newData, (error) => {
-          if (error) {
-            console.error('Lỗi khi cập nhật:', error);
-            alert('Cập nhật thất bại: ' + error.message);
-          } else {
-            document.getElementById('net-profit').textContent = newData.netProfit;
-            document.getElementById('avg-monthly-profit').textContent = newData.avgMonthlyProfit;
-            document.getElementById('max-drawdown').textContent = newData.maxDrawdown;
-            alert('Cập nhật thành công!');
-          }
-        });
-      }
-    }
 
-    // Cập nhật dữ liệu hiệu suất lên Firebase
-    function updatePerformance() {
-      if (confirm('Bạn có chắc chắn muốn cập nhật hiệu suất không?')) {
-        const performanceData = {};
-        for (let i = 1; i <= 12; i++) {
-          const value = document.getElementById(`month-${i}`).value;
-          performanceData[`month${i}`] = value ? parseFloat(value) : 0;
-        }
-
-        database.ref('performance').set(performanceData, (error) => {
-          if (error) {
-            console.error('Lỗi khi cập nhật hiệu suất:', error);
-            alert('Cập nhật thất bại: ' + error.message);
-          } else {
-            updateChart(performanceData);
-            alert('Cập nhật hiệu suất thành công!');
-          }
-        });
-      }
-    }
 
     // Cập nhật biểu đồ
     let chartInstance = null;
