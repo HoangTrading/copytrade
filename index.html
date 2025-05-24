@@ -24,7 +24,7 @@
             <div class="hidden md:flex space-x-6">
                 <a href="#hieu_suat" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">HIỆU SUẤT</a>
                 <a href="#quy_trinh" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">QUY TRÌNH</a>
-                <a href="#chi_so" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">CHỈ SỐ</a>
+                <a href="#nguyen_tac" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">NGUYÊN TẮC</a>
                 <a href="#faq" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">FAQ</a>
                 <a href="#quan_diem" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">QUAN ĐIỂM</a>
                 <a href="#xem_chien_luoc" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">XEM CHIẾN LƯỢC</a>
@@ -43,7 +43,7 @@
             <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
                 <a href="#hieu_suat" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">HIỆU SUẤT</a>
                 <a href="#quy_trinh" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">QUY TRÌNH</a>
-                <a href="#chi_so" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">CHỈ SỐ</a>
+                <a href="#nguyen_tac" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">NGUYÊN TẮC</a>
                 <a href="#faq" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">FAQ</a>
                 <a href="#quan_diem" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">QUAN ĐIỂM</a>
                 <a href="#xem_chien_luoc" class="text-gray-300 font-quicksand hover:text-cyan-400 transition-all hover-scale nav-link">XEM CHIẾN LƯỢC</a>
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <div class="py-20 relative" >
+        <!-- <div class="py-20 relative" >
             <div id="particles-profit-chart" class="particles-section p-8"></div>
             <div class="container mx-auto px-4 relative z-10">               
                 <div class="max-w-4xl mx-auto">
@@ -120,9 +120,68 @@
                 </div>
                 <h1 class="text-center py-10 text-2xl font-bold font-space-grotesk text-cyan-400 profit-glow">KẾT QUẢ GIAO DỊCH THỰC TẾ</h1>
             </div>
+        </div> -->
+    </section>
+
+
+
+    <section id="chi_so" class="py-20 relative">
+        <div id="particles-trader" class="particles-section"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-8xl mx-auto">
+                <div class="card-bg rounded-2xl p-8 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="flex-1">
+                            <div class="py-20 relative" >
+                                <div id="particles-profit-chart" class="particles-section p-8"></div>
+                                <div class="container mx-auto px-4 relative z-10">               
+                                    <div class="max-w-4xl mx-auto">
+                                        <div class="card-bg rounded-2xl p-8 shadow-2xl hover-scale" data-aos="fade-up" data-aos-duration="800">
+                                            <div class="chart-container">
+                                                <canvas id="performance-chart"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3 py-20 relative  ">
+                            <div class="bg-gray-900 p-6 rounded-xl" data-aos="fade-left" data-aos-delay="400">
+                                <div class="text-cyan-400 mb-4 font-space-grotesk">Chỉ số chiến lược</div>
+                                <div class="space-y-4">
+                                    <div>
+                                      <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận ròng</div>
+                                      <div id="net-profit" class="text-2xl font-bold text-green-500 font-roboto-mono">45%</div>
+                                    </div>
+                                    <div>
+                                      <div class="text-sm text-gray-400 font-roboto-mono">Lợi nhuận TB tháng</div>
+                                      <div id="avg-monthly-profit" class="text-2xl font-bold text-green-300 font-roboto-mono">10%</div>
+                                    </div>
+                                    <div>
+                                      <div class="text-sm text-gray-400 font-roboto-mono">Mức sụt giảm tối đa</div>
+                                      <div id="max-drawdown" class="text-2xl font-bold text-red-400 font-roboto-mono">3,92%</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-gray-400 font-roboto-mono">Phí hiệu suất</div>
+                                        <div id="max-drawdown" class="text-2xl font-bold text-white-400 font-roboto-mono">10%</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-sm text-gray-400 font-roboto-mono">Mức đầu tư tối thiểu</div>
+                                        <div id="max-drawdown" class="text-2xl font-bold text-white-400 font-roboto-mono">10$</div>
+                                    </div>
+                                  </div>
+                                  
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="text-center py-10 text-2xl font-bold font-space-grotesk text-cyan-400 profit-glow">KẾT QUẢ GIAO DỊCH THỰC TẾ</h1>
+                </div>
+            </div>
         </div>
     </section>
 
+    
 
     <!-- Quy_trinh -->
     <section id="quy_trinh" class="py-20 bg-gray-900 relative">
@@ -172,9 +231,10 @@
         </div>
     </section>
 
-    <!-- Chi_so -->
-    <section id="chi_so" class="py-20 relative">
-        <div id="particles-trader" class="particles-section"></div>
+
+     <!-- Nguyen_tac -->
+     <section id="nguyen_tac" class="py-20 from-cyan-500 to-blue-600 relative">
+        <div id="particles-cta" class="particles-section"></div>
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-4xl mx-auto">
                 <div class="card-bg rounded-2xl p-8 shadow-2xl" data-aos="fade-up" data-aos-duration="800">
@@ -205,7 +265,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="md:w-1/3">
+                        <!-- <div class="md:w-1/3">
                             <div class="bg-gray-900 p-6 rounded-xl" data-aos="fade-left" data-aos-delay="400">
                                 <div class="text-cyan-400 mb-4 font-space-grotesk">Chỉ số chiến lược</div>
                                 <div class="space-y-4">
@@ -223,12 +283,13 @@
                                     </div>
                                   </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-gray-900 relative">
